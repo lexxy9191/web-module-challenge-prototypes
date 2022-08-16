@@ -62,6 +62,17 @@ this.odometer = 0;
 Car.prototype.fill = function(gallons){
   this.tank = this.tank + gallons;
 }
+Car.prototype.drive = function(distance){
+const driveableMiles = this.tank * this.milesPerGallons;
+if(distance <= driveableMiles){
+  this.odometer = this.odometer + distance;
+  this.tank = this.tankk - (distance / this.milesPerGallon);
+}else{
+  this.odometer = this.odometer + driveable/miles;
+  this.tank = o;
+  return `I ran out of fuel at ${this.odometer} miles`;
+}
+}
 
 /*
   TASK 3
@@ -71,8 +82,9 @@ Car.prototype.fill = function(gallons){
         + Should return a string "Playing with x", x being the favorite toy.
 */
 
-function Baby() {
-
+function Baby(name, age, favoriteToy) {
+Person.call(this, name, age);
+this.favoriteToy = favoriteToy;
 }
 
 
